@@ -41,7 +41,7 @@ st.markdown(footer_style, unsafe_allow_html=True)
 # --------------------
 # Page config
 # --------------------
-st.set_page_config(page_title="AI Buddy • OrbyAI", page_icon="🤝", layout="wide")
+st.set_page_config(page_title="AI Buddy • OrbyAI", page_icon="/Users/sahithiunkili/Downloads/your-ai-buddy-hackathon-repo-with-logo/ui/assets/ai_buddy_logo.png", layout="wide")
 
 # --------------------
 # Helpers
@@ -71,7 +71,7 @@ def seed_calendar(days=5):
     return pd.DataFrame(rows)
 
 def seed_emails(n=6):
-    senders = ["ansia@gmail.com", "aditi@gmail.com", "zena@gmail.ai", "vrushti@gmail.com"]
+    senders = ["ans4567@gmail.com", "mrsaditisiriyan@gmail.com", "zenbam@gmail.ai", "vrushtitriv@gmail.com"]
     subjects = ["Follow-up on project", "Reminder: Wellness Friday", "Presentation Preperation", "Weekly report"]
     return pd.DataFrame(
         {
@@ -202,11 +202,20 @@ UPLIFTING_PLAYLIST = "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0"
 # Pages
 # --------------------
 if nav == "Home":
-    safe_logo("assets/ai_buddy_logo.png", width=200)
-    st.markdown("## OrbyAI: Your AI Buddy that Orbits Around **You**!")
-    st.write(
-        "Empathetic conversations, wellness nudges, and smart scheduling, all in one friendly companion."
-    )
+    # Use st.image for proper file path resolution + HTML for centering text
+    st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
+    st.image("assets/ai_buddy_logo.png", width=200)
+    st.markdown("""
+        <h2 style='color:#1b2a5b; font-size:32px; font-weight:800;'>
+            OrbyAI: Your AI Buddy that Orbits Around <span style='color:#007bff;'>You</span>!
+        </h2>
+        <p style='font-size:18px; color:#555;'>
+            Empathetic conversations, wellness nudges, and smart scheduling : All in one friendly companion.
+        </p>
+    """, unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
     if st.button("💡 Generate Smart Day Plan"):
         st.success("✅ Your personalized day plan is ready:")
         st.write("• 09:00 - Prioritize key emails")
