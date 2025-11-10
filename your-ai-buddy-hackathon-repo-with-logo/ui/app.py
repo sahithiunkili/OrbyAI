@@ -7,6 +7,13 @@ from datetime import datetime, timedelta
 import streamlit as st
 import pandas as pd
 
+# --- Add robust logo loader ---
+logo_path = os.path.join(os.path.dirname(__file__), "assets", "ai_buddy_logo.png")
+if os.path.exists(logo_path):
+    st.image(logo_path, width=200)
+else:
+    st.error(f"Logo not found at: {logo_path}")
+
 # --- FOOTER STYLING (OrbyAI theme) ---
 footer_style = """
     <style>
@@ -204,7 +211,6 @@ UPLIFTING_PLAYLIST = "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0"
 if nav == "Home":
     # Use st.image for proper file path resolution + HTML for centering text
     st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
-    st.image("assets/ai_buddy_logo.png", width=200)
     st.markdown("""
         <h2 style='color:#1b2a5b; font-size:32px; font-weight:800;'>
             OrbyAI: Your AI Buddy that Orbits Around <span style='color:#007bff;'>You</span>!
@@ -308,7 +314,7 @@ elif nav == "Calendar":
         st.session_state.tasks.append({"task": new_task.strip(), "done": False})
         st.rerun()
 
-     #header for tip
+    # Header for tip
     st.caption("💡 Tip: Balance productivity with rest — even small wins count.")
 
     # --- Calendar preview ---
@@ -320,8 +326,6 @@ elif nav == "Calendar":
         "Tasks": [3, 2, 4, 3, 2, 1, 0],
     })
     st.bar_chart(df.set_index("Day"), height=200, use_container_width=True)
-
-   
 
 
 elif nav == "Mail":
@@ -341,7 +345,7 @@ elif nav == "Mail":
         return color
 
     # Apply color styling
-    styled_df = df.style.applymap(color_priority, subset=["Priority"])
+    styled_df = df.style.map(color_priority, subset=["Priority"])
 
     st.dataframe(styled_df, use_container_width=True)
 
