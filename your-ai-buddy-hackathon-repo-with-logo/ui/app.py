@@ -41,7 +41,7 @@ st.markdown(footer_style, unsafe_allow_html=True)
 # --------------------
 # Page config
 # --------------------
-st.set_page_config(page_title="AI Buddy • OrbyAI", page_icon="/Users/sahithiunkili/Downloads/your-ai-buddy-hackathon-repo-with-logo/ui/assets/ai_buddy_logo.png", layout="wide")
+st.set_page_config(page_title="AI Buddy • OrbyAI", page_icon="/assets/ai_buddy_logo.png", layout="wide")
 
 # --------------------
 # Helpers
