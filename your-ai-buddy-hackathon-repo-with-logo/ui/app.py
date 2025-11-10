@@ -41,7 +41,7 @@ st.markdown(footer_style, unsafe_allow_html=True)
 # --------------------
 # Page config
 # --------------------
-st.set_page_config(page_title="AI Buddy • OrbyAI", page_icon="ai_buddy_logo.png", layout="wide")
+st.set_page_config(page_title="AI Buddy • OrbyAI", page_icon="ui/ai_buddy_logo.png", layout="wide")
 
 # --------------------
 # Helpers
@@ -111,7 +111,7 @@ st.markdown(ANIM_CSS, unsafe_allow_html=True)
 # Sidebar
 # --------------------
 with st.sidebar:
-    safe_logo("ai_buddy_logo.png", width=100)
+    safe_logo("ui/ai_buddy_logo.png", width=100)
     st.title("AI Buddy Navigation")
     st.markdown("### 🤝 Your Proactive Personal Companion")
 
@@ -204,7 +204,7 @@ UPLIFTING_PLAYLIST = "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0"
 if nav == "Home":
     # Use st.image for proper file path resolution + HTML for centering text
     st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
-    st.image("ai_buddy_logo.png", width=200)
+    st.image("ui/ai_buddy_logo.png", width=200)
     st.markdown("""
         <h2 style='color:#1b2a5b; font-size:32px; font-weight:800;'>
             OrbyAI: Your AI Buddy that Orbits Around <span style='color:#007bff;'>You</span>!
