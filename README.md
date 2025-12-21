@@ -5,7 +5,7 @@
 ---
 
 ## Why it matters
-In an increasingly connected yet isolated world, many struggle with loneliness. AI Buddy leverages generative AI with human‑in‑the‑loop guardrails to deliver *productive companionship*: unified tasking, well‑being nudges, context‑aware chat, and privacy‑first memory.
+In an increasingly connected yet isolated world, many struggle with loneliness. AI Buddy leverages generative AI with human‑in‑the‑loop guardrails to deliver *productive companionship* : unified tasking, well‑being nudges, context‑aware chat, and privacy‑first memory.
 
 ---
 
